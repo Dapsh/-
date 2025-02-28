@@ -1,0 +1,42 @@
+@import '@fontsource/montserrat/400.css';
+@import '@fontsource/montserrat/500.css';
+@import '@fontsource/montserrat/600.css';
+@import '@fontsource/montserrat/700.css';
+@import '@fontsource/open-sans/400.css';
+@import '@fontsource/open-sans/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Open Sans', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #1a237e !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #1a237e !important;
+}
+
+.service-card {
+  @apply relative overflow-hidden rounded-lg bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
+
+.service-card:hover .service-details {
+  @apply opacity-100;
+}
+
+.service-details {
+  @apply absolute inset-0 flex flex-col items-center justify-center bg-[#1a237e]/90 p-4 text-white opacity-0 transition-opacity duration-300;
+}
